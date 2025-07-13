@@ -1,55 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majelis Kebun Mega Juang</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Majelis Kebun Mega Juang</title>
+  <style>
+    body {
+      background-color: #a83232; /* Merah tua */
+      color: gold; /* Teks emas */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    header img {
+      width: 80px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      color: white;
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    h2 {
+      color: black; /* Judul hitam */
+      text-align: center;
+    }
+
+    .section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .pengurus-img {
+      width: 250px;
+      max-width: 100%;
+      border: 2px solid gold;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-wa {
+      display: inline-block;
+      background-color: #25D366; /* Warna hijau WA */
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    video {
+      width: 80%;
+      max-width: 600px;
+      margin: 10px 0;
+      border: 3px solid white;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo.jpg" alt="Logo Majelis" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#undangan">Undangan</a></li>
-                <li><a href="#pengurus">Pengurus</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="beranda">
-        <h1>Selamat Datang di Majelis Kebun Mega Juang</h1>
-        <div class="carousel">
-            <video src="video1.mp4" controls></video>
-            <video src="video2.mp4" controls></video>
-            <video src="video3.mp4" controls></video>
-            <video src="video4.mp4" controls></video>
-            <video src="video5.mp4" controls></video>
-            <video src="video6.mp4" controls></video>
-        </div>
-    </section>
+  <header>
+    <img src="logo.jpg" alt="Logo Majelis" />
+    <h1>Majelis Kebun Mega Juang</h1>
+  </header>
 
-    <section id="undangan">
-        <h2>Undangan Hadir Majelis</h2>
-        <p>Dengan hormat, kami mengundang seluruh jamaah untuk menghadiri pengajian rutin:</p>
-        <p><strong>Setiap Hari Sabtu malam Minggu, pukul 19:22 WIB</strong></p>
-        <p>Bertempat di Majelis Kebun Mega Juang</p>
-    </section>
+  <div class="section">
+    <h2>Undangan Umum</h2>
+    <p>Dengan hormat, kami mengundang seluruh warga untuk menghadiri pengajian rutin:</p>
+    <p><strong>Setiap Hari Sabtu malam Minggu, pukul 19:22 WIB</strong></p>
+    <p>Di Ds Tingkis RT 02 RW 02 Singgahan, Tuban<br />
+      Bertempat di Majelis Kebun Mega Juang</p>
+  </div>
 
-    <section id="pengurus">
-        <h2>Tentang Pengurus</h2>
-        <img src="pengurus.jpg" alt="Foto Pengurus" class="pengurus-img">
-        <p><strong>Nama Pengasuh:</strong> SOPONYONO ABDUL RA'UF</p>
-        <p><strong>Nomor HP:</strong> 081327237979</p>
-        <p><strong>Kontak Person:</strong> soponyono</p>
-    </section>
+  <div class="section">
+    <h2>Video Kegiatan</h2>
+    <video controls src="video1.mp4"></video>
+    <video controls src="video2.mp4"></video>
+    <video controls src="video3.mp4"></video>
+    <video controls src="video4.mp4"></video>
+    <video controls src="video5.mp4"></video>
+    <video controls src="video6.mp4"></video>
+  </div>
 
-    <footer>
-        <p><strong>Pengelola Website:</strong> B.Gox Ndangun</p>
-        <p><strong>Nomor WA:</strong> 089659833666</p>
-        <p>&copy; 2025 Majelis Kebun Mega Juang</p>
-    </footer>
+  <div class="section">
+    <h2>Pengurus</h2>
+    <img src="pengurus.jpg" alt="Foto Pengurus" class="pengurus-img" />
+    <p><strong>Nama Pengasuh:</strong> SOPONYONO ABDUL RA'UF</p>
+    <p><strong>No. HP:</strong> 081327237979</p>
+    <a href="https://wa.me/6281327237979" class="btn-wa">Hubungi Pengasuh via WA</a>
+  </div>
+
+  <div class="section">
+    <h2>Kontak Pengelola Website</h2>
+    <p><strong>Nama:</strong> B.Gox Ndangun</p>
+    <a href="https://wa.me/6289659833666" class="btn-wa">Hubungi Pengelola Web</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Majelis Kebun Mega Juang - Website by B.Gox Ndangun
+  </footer>
+
 </body>
 </html>
