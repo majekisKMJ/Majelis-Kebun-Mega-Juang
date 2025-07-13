@@ -60,8 +60,8 @@
     }
     .video-slider video {
       flex: 0 0 auto;
-      width: 300px;
-      height: auto;
+      width: 560px;
+      height: 315px;
       scroll-snap-align: start;
       border: 3px solid #fff;
       border-radius: 10px;
@@ -77,6 +77,12 @@
       margin: 10px;
       text-decoration: none;
       display: inline-block;
+    }
+    @media screen and (max-width: 600px) {
+      .video-slider video {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
