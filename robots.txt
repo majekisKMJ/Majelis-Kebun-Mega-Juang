@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://majekiskmj.github.io/Majelis-Kebun-Mega-Juang/sitemap.xml
