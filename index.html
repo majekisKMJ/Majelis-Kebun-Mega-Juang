@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,14 +24,21 @@
       padding: 1rem;
     }
 
+    .logo {
+      max-width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
     header h1 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin: 0;
     }
 
     header h2 {
       font-size: 1rem;
-      margin: 0.5rem 0 0 0;
+      margin: 0.3rem 0 0 0;
+      font-weight: normal;
     }
 
     .description {
@@ -56,8 +62,8 @@
 
     .video-container video {
       width: 100%;
-      max-width: 400px;
-      aspect-ratio: 1 / 1;
+      max-width: 320px;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -98,6 +104,7 @@
 
 <body>
   <header>
+    <img src="logo.jpg" alt="Logo Majelis" class="logo">
     <h1>MAJELIS KEBUN MEGA JUANG TINGKIS</h1>
     <h2>Tingkis Singgahan Tuban Jawa Timur</h2>
   </header>
@@ -131,6 +138,7 @@
     <h3>PENGASUH</h3>
     <img src="pengurus.jpg" alt="Foto Pengasuh">
     <p>Soponyono Abdul Ra'uf</p>
+    <p>📞 <a href="https://wa.me/6281327237979" style="color:#25D366; text-decoration:none;">+62 813-2723-7979</a></p>
     <a href="https://wa.me/6281327237979" class="wa-button">Hubungi Pengasuh via WA</a>
   </div>
 
@@ -139,5 +147,4 @@
     &copy; 2025 Majelis Kebun Mega Juang Tingkis
   </footer>
 </body>
-
 </html>
