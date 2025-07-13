@@ -17,8 +17,13 @@
       padding: 0;
     }
     header {
+      background-color: #000;
+      color: gold;
       text-align: center;
       padding: 20px;
+    }
+    header h1, header h2 {
+      color: gold;
     }
     header h1 {
       font-size: 2em;
@@ -43,11 +48,32 @@
       padding: 20px;
       text-align: center;
     }
+    .video-slider-container {
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .video-slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
     .video-slider video {
       width: 100%;
-      max-width: 800px;
-      height: auto;
-      margin-bottom: 20px;
+      flex: 0 0 100%;
+    }
+    .slider-buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .slider-buttons button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
     }
     .whatsapp-button {
       background-color: #25D366;
@@ -64,9 +90,11 @@
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="Logo Majelis" width="120" height="120">
-    <h1>MAJELIS KEBUN MEGA JUANG TINGKIS</h1>
-    <h2>Tingkis Singgahan Tuban Jawa Timur</h2>
+    <div style="background-color: black; padding: 10px;">
+      <img src="logo.jpg" alt="Logo Majelis" width="120" height="120">
+      <h1>MAJELIS KEBUN MEGA JUANG TINGKIS</h1>
+      <h2>Tingkis Singgahan Tuban Jawa Timur</h2>
+    </div>
   </header>
 
   <section>
@@ -78,13 +106,19 @@
     </p>
   </section>
 
-  <section class="video-slider">
-    <video controls src="video1.mp4"></video>
-    <video controls src="video2.mp4"></video>
-    <video controls src="video3.mp4"></video>
-    <video controls src="video4.mp4"></video>
-    <video controls src="video5.mp4"></video>
-    <video controls src="video6.mp4"></video>
+  <section class="video-slider-container">
+    <div class="video-slider" id="videoSlider">
+      <video controls src="video1.mp4"></video>
+      <video controls src="video2.mp4"></video>
+      <video controls src="video3.mp4"></video>
+      <video controls src="video4.mp4"></video>
+      <video controls src="video5.mp4"></video>
+      <video controls src="video6.mp4"></video>
+    </div>
+    <div class="slider-buttons">
+      <button onclick="prevSlide()">Sebelumnya</button>
+      <button onclick="nextSlide()">Berikutnya</button>
+    </div>
   </section>
 
   <section>
@@ -102,6 +136,7 @@
     <img src="pengurus.jpg" alt="Foto Pengasuh" width="300">
     <p><strong>Pengasuh:</strong></p>
     <p>SOPONYONO ABDUL RA'UF</p>
+    <p>📞 0813-2723-7979</p>
     <a class="whatsapp-button" href="https://wa.me/6281327237979" target="_blank">Hubungi Pengasuh via WhatsApp</a>
   </section>
 
@@ -109,5 +144,25 @@
     <h2>Kontak Pengelola Website</h2>
     <a class="whatsapp-button" href="https://wa.me/6289659833666" target="_blank">Hubungi Pengelola via WhatsApp</a>
   </section>
+
+  <script>
+    let currentIndex = 0;
+    const slider = document.getElementById('videoSlider');
+    const totalVideos = slider.children.length;
+
+    function showSlide(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalVideos;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalVideos) % totalVideos;
+      showSlide(currentIndex);
+    }
+  </script>
 </body>
 </html>
